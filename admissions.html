@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Dugnad School Admissions — enrollment process, requirements, fees, and how to apply for Day Care, Kindergarten, and Primary 1–4 in Wakiso District." />
+<title>Admissions | Dugnad School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+/* ============ GLOBAL STYLES (copy into every page) ============ */
+:root{--red:#C8102E;--red-dark:#a30d25;--green:#1B7A3D;--yellow:#F5C518;--navy:#14213D;--dark:#1B2A4A;--text:#2b2b2b;--muted:#6b7280;--bg:#ffffff;--bg-soft:#f7f9fc;--radius:14px;--shadow:0 10px 30px rgba(20,33,61,.08);--shadow-lg:0 20px 50px rgba(20,33,61,.15);--max:1180px;--transition:all .3s ease}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:"Open Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Poppins",sans-serif;color:var(--navy);line-height:1.2}
+img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-style:none}
+.container{width:92%;max-width:var(--max);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:50px;font-weight:600;font-size:.95rem;font-family:"Poppins",sans-serif;cursor:pointer;border:2px solid transparent;transition:var(--transition);white-space:nowrap}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(200,16,46,.3)}
+.btn-primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 12px 26px rgba(200,16,46,.4)}
+.btn-outline{background:transparent;color:#fff;border-color:#fff}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+.btn-block{width:100%}
+.topbar{background:var(--navy);color:#e8edf6;font-size:.82rem}
+.topbar-inner{display:flex;gap:24px;padding:9px 0;flex-wrap:wrap}
+.topbar-item{display:flex;align-items:center;gap:7px}
+.topbar-item i{color:var(--yellow)}
+.header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 14px rgba(0,0,0,.06);transition:var(--transition)}
+.header.scrolled{box-shadow:0 4px 22px rgba(0,0,0,.1)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:18px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{position:relative;width:46px;height:46px;border-radius:50%;background:#fff;border:3px solid var(--red);display:grid;place-items:center;overflow:hidden}
+.ring{position:absolute;border-radius:50%}
+.ring-red{width:46px;height:46px;border:4px solid var(--red)}
+.ring-yellow{width:34px;height:34px;border:3px solid var(--yellow)}
+.ring-green{width:22px;height:22px;border:3px solid var(--green)}
+.logo-text{position:relative;z-index:2;font-weight:800;font-family:"Poppins",sans-serif;color:var(--navy);font-size:1rem}
+.logo-name{display:flex;flex-direction:column;line-height:1}
+.logo-name strong{font-family:"Poppins",sans-serif;font-size:1.15rem;color:var(--navy);letter-spacing:1px}
+.logo-name span{font-size:.68rem;letter-spacing:3px;color:var(--red);font-weight:700}
+.nav{display:flex;align-items:center;gap:4px}
+.nav-link{font-weight:600;font-size:.92rem;padding:9px 14px;border-radius:8px;color:var(--dark);transition:var(--transition);font-family:"Poppins",sans-serif}
+.nav-link:hover,.nav-link.active{color:var(--red);background:#fff1f3}
+.nav-cta{margin-left:8px;padding:10px 22px;font-size:.88rem}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.hamburger span{width:26px;height:3px;background:var(--navy);border-radius:3px;transition:var(--transition)}
+.hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.section{padding:80px 0}
+.section-head{text-align:center;max-width:620px;margin:0 auto 46px}
+.eyebrow{display:inline-block;color:var(--red);font-weight:700;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:"Poppins",sans-serif}
+.section-head h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:12px}
+.section-head p{color:var(--muted)}
+.footer{background:var(--navy);color:#c4d0e0;padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:34px;padding-bottom:40px}
+.footer h4{color:#fff;margin-bottom:16px;font-size:1rem}
+.footer ul li{padding:5px 0;font-size:.9rem}
+.footer ul li a{transition:var(--transition)}
+.footer ul li a:hover{color:var(--yellow)}
+.footer ul li i{color:var(--yellow);margin-right:8px;width:14px}
+.footer-logo{margin-bottom:14px}
+.footer-logo .logo-name strong{color:#fff}
+.footer-tag{font-size:.88rem;line-height:1.6}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:18px 0;text-align:center;font-size:.85rem}
+.back-to-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transition:var(--transition);z-index:900;border:none;cursor:pointer}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--red-dark);transform:translateY(-4px)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){
+  .nav{position:fixed;top:0;right:-100%;width:75%;max-width:320px;height:100vh;background:#fff;flex-direction:column;align-items:stretch;padding:90px 24px 30px;box-shadow:-10px 0 40px rgba(0,0,0,.15);transition:right .35s ease;gap:6px;overflow-y:auto}
+  .nav.open{right:0}
+  .nav-link{font-size:1rem;padding:12px 14px}
+  .nav-cta{margin:10px 0 0}
+  .hamburger{display:flex}
+  .topbar .hide-sm{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.section{padding:60px 0}.topbar-inner{gap:14px;font-size:.75rem}.footer-grid{grid-template-columns:1fr}}
+
+/* ============ ADMISSIONS PAGE ONLY ============ */
+.page-banner{background:linear-gradient(135deg,#14213D 0%,#1B7A3D 100%);color:#fff;padding:80px 0 70px;position:relative;overflow:hidden}
+.page-banner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(245,197,24,.18),transparent 55%)}
+.page-banner-inner{position:relative;text-align:center;max-width:720px;margin:0 auto}
+.page-banner h1{color:#fff;font-size:clamp(2rem,4.5vw,3rem);font-weight:800;margin-bottom:14px}
+.page-banner p{color:#d9e2f0;font-size:1.02rem}
+.page-banner .banner-cta{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.notice{display:flex;align-items:flex-start;gap:14px;background:#fff8e1;border:1px solid #f5d97a;border-left:4px solid var(--yellow);border-radius:var(--radius);padding:18px 22px;margin-bottom:46px}
+.notice i{color:#b88a00;font-size:1.2rem;margin-top:2px;flex-shrink:0}
+.notice strong{display:block;font-family:"Poppins",sans-serif;color:var(--navy);margin-bottom:2px;font-size:.95rem}
+.notice p{font-size:.88rem;color:#7a6a2e}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
+.step-card{background:#fff;border-radius:var(--radius);padding:30px 22px;box-shadow:var(--shadow);position:relative;transition:var(--transition);border-top:4px solid var(--green);text-align:center}
+.step-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.step-card:nth-child(2){border-top-color:var(--red)}
+.step-card:nth-child(3){border-top-color:var(--yellow)}
+.step-card:nth-child(4){border-top-color:var(--navy)}
+.step-num{width:48px;height:48px;border-radius:50%;background:#fff4e5;color:var(--red);display:grid;place-items:center;font-family:"Poppins",sans-serif;font-weight:800;font-size:1.15rem;margin:0 auto 16px;border:2px solid currentColor}
+.step-card:nth-child(2) .step-num{background:#e8f5ee;color:var(--green)}
+.step-card:nth-child(3) .step-num{background:#fff8e1;color:#b88a00}
+.step-card:nth-child(4) .step-num{background:#e8edf6;color:var(--navy)}
+.step-card h3{font-size:1.05rem;margin-bottom:8px}
+.step-card p{color:var(--muted);font-size:.88rem}
+.req-section{background:var(--bg-soft)}
+.req-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.req-card{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+.req-card h3{font-size:1.15rem;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.req-card h3 i{color:var(--red)}
+.req-card .sub{color:var(--muted);font-size:.86rem;margin-bottom:16px}
+.req-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:.9rem;color:#4a5568;border-bottom:1px dashed #eef1f6}
+.req-list li:last-child{border-bottom:none}
+.req-list i{color:var(--green);margin-top:4px;font-size:.85rem}
+.fees-table-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow)}
+.fees-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;min-width:560px}
+.fees-table th,.fees-table td{padding:16px 20px;text-align:left;font-size:.9rem;border-bottom:1px solid #eef1f6}
+.fees-table thead th{background:var(--navy);color:#fff;font-family:"Poppins",sans-serif;font-size:.88rem;font-weight:600}
+.fees-table tbody tr:hover{background:#fafbfd}
+.fees-table tbody tr:last-child td{border-bottom:none}
+.fees-table td:first-child{font-weight:600;color:var(--navy)}
+.fees-table .amount{font-family:"Poppins",sans-serif;font-weight:700;color:var(--red)}
+.fees-note{font-size:.82rem;color:var(--muted);margin-top:14px;text-align:center}
+.form-section{background:var(--bg-soft)}
+.form-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:start}
+.form-info h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:14px}
+.form-info p{color:#4a5568;margin-bottom:22px}
+.form-info .contact-line{display:flex;align-items:center;gap:12px;padding:10px 0;font-size:.92rem}
+.form-info .contact-line i{width:38px;height:38px;border-radius:10px;background:#fff1f3;color:var(--red);display:grid;place-items:center;flex-shrink:0}
+.form-card{background:#fff;border-radius:var(--radius);padding:34px 30px;box-shadow:var(--shadow)}
+.form-card h3{font-size:1.2rem;margin-bottom:20px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:6px;font-family:"Poppins",sans-serif}
+.form-group label .req{color:var(--red)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-family:"Open Sans",sans-serif;font-size:.92rem;color:var(--text);background:#fff;transition:var(--transition)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(200,16,46,.1)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-card .btn{width:100%;margin-top:6px}
+.form-note{font-size:.76rem;color:var(--muted);text-align:center;margin-top:12px}
+.cta-band{background:linear-gradient(135deg,#C8102E,#a30d25);color:#fff;padding:56px 0}
+.cta-band-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta-band h2{color:#fff;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:6px}
+.cta-band p{color:#ffd9e0}
+.cta-band-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.cta-band .btn-outline{border-color:#fff;color:#fff}
+.cta-band .btn-outline:hover{background:#fff;color:var(--red)}
+@media(max-width:900px){.steps-grid{grid-template-columns:1fr 1fr}.req-grid{grid-template-columns:1fr}.form-wrap{grid-template-columns:1fr}}
+@media(max-width:560px){.steps-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar"><div class="container topbar-inner">
+  <div class="topbar-item"><i class="fa-solid fa-phone"></i> +256 778 947 496</div>
+  <div class="topbar-item"><i class="fa-solid fa-envelope"></i> dugnaduganda@gmail.com</div>
+  <div class="topbar-item hide-sm"><i class="fa-solid fa-location-dot"></i> Kavule Jomayi Estate, Matuga–Semuto Rd.</div>
+</div></div>
+
+<!-- HEADER -->
+<header class="header" id="header"><div class="container nav-inner">
+  <a href="index.html" class="logo">
+    <div class="logo-badge"><span class="ring ring-red"></span><span class="ring ring-yellow"></span><span class="ring ring-green"></span><span class="logo-image"><img src="logo.png"/></span></div>
+    <div class="logo-name"><strong>DUGNAD</strong><span>SCHOOL</span></div>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="programs.html" class="nav-link">Programs</a>
+    <a href="why-us.html" class="nav-link">Why Dugnad</a>
+    <a href="gallery.html" class="nav-link">Gallery</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="admissions.html" class="btn btn-primary nav-cta">Enroll Now</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+
+<!-- PAGE BANNER -->
+<section class="page-banner">
+  <div class="container page-banner-inner reveal">
+    <span class="eyebrow" style="color:var(--yellow)">Admissions</span>
+    <h1>Begin Your Child's Journey</h1>
+    <p>Admissions are open for Day Care, Kindergarten, and Primary 1–4. Here's everything you need to get started.</p>
+    <div class="banner-cta">
+      <a href="#enquiry" class="btn btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="contact.html" class="btn btn-outline">Talk to Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICE + PROCESS -->
+<section class="section"><div class="container">
+  <div class="notice reveal">
+    <i class="fa-solid fa-circle-info"></i>
+    <div>
+      <strong>Registration is currently in progress.</strong>
+      <p>We are accepting applications for all programs. Early applicants are given priority — submit your enquiry today to secure a place for your child.</p>
+    </div>
+  </div>
+  <div class="section-head reveal"><span class="eyebrow">How to Apply</span><h2>Four Simple Steps</h2><p>From first enquiry to first day — we'll guide you at every step.</p></div>
+  <div class="steps-grid">
+    <div class="step-card reveal"><div class="step-num">1</div><h3>Enquire</h3><p>Fill in the enquiry form below or call us to express interest in a place.</p></div>
+    <div class="step-card reveal"><div class="step-num">2</div><h3>Visit</h3><p>Book a school tour to meet our teachers and see the campus for yourself.</p></div>
+    <div class="step-card reveal"><div class="step-num">3</div><h3>Apply</h3><p>Complete the application form and submit the required documents.</p></div>
+    <div class="step-card reveal"><div class="step-num">4</div><h3>Enroll</h3><p>Confirm your child's place, complete the fee process, and join the Dugnad family.</p></div>
+  </div>
+</div></section>
+
+<!-- REQUIREMENTS -->
+<section class="section req-section"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow">What You'll Need</span><h2>Admission Requirements</h2><p>Documents and details to prepare for a smooth application.</p></div>
+  <div class="req-grid">
+    <div class="req-card reveal">
+      <h3><i class="fa-solid fa-file-lines"></i> Documents</h3>
+      <p class="sub">Please bring originals and copies where possible.</p>
+      <ul class="req-list">
+        <li><i class="fa-solid fa-check"></i> Child's birth certificate or copy</li>
+        <li><i class="fa-solid fa-check"></i> Immunization / health record</li>
+        <li><i class="fa-solid fa-check"></i> Recent passport-size photographs (2–4)</li>
+        <li><i class="fa-solid fa-check"></i> Parent / guardian national ID copy</li>
+        <li><i class="fa-solid fa-check"></i> Previous school report (P1–P4 transfers only)</li>
+      </ul>
+    </div>
+    <div class="req-card reveal">
+      <h3><i class="fa-solid fa-user-check"></i> Eligibility</h3>
+      <p class="sub">Programs are organized by age and readiness.</p>
+      <ul class="req-list">
+        <li><i class="fa-solid fa-check"></i> <strong>Day Care:</strong> Ages 2+</li>
+        <li><i class="fa-solid fa-check"></i> <strong>Kindergarten:</strong> Ages 3–5</li>
+        <li><i class="fa-solid fa-check"></i> <strong>Primary 1–4:</strong> Age-appropriate entry</li>
+        <li><i class="fa-solid fa-check"></i> A short informal readiness chat for young learners</li>
+        <li><i class="fa-solid fa-check"></i> Commitment to our parent–school partnership</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- FEES -->
+<section class="section"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow">Fees</span><h2>Transparent Fees, No Surprises</h2><p>Termly fees vary by program. Contact us for the current fee structure.</p></div>
+  <div class="fees-table-wrap reveal">
+    <table class="fees-table">
+      <thead>
+        <tr><th>Program</th><th>Age Group</th><th>Termly Fees</th><th>Includes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Day Care</td><td>2+ years</td><td class="amount">On request</td><td>Meals, care, play-based learning</td></tr>
+        <tr><td>Kindergarten</td><td>3–5 years</td><td class="amount">On request</td><td>Meals, learning materials, activities</td></tr>
+        <tr><td>Primary 1–4</td><td>Primary</td><td class="amount">On request</td><td>Meals, learning materials, ICT</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fees-note">School van transport is available at an additional fee. Contact the office for the current fee structure and payment options.</p>
+</div></section>
+
+<!-- ENQUIRY FORM -->
+<section class="section form-section" id="enquiry"><div class="container form-wrap">
+  <div class="form-info reveal">
+    <span class="eyebrow">Get Started</span>
+    <h2>Send an Admission Enquiry</h2>
+    <p>Tell us a little about your child and which program you're interested in. We'll get back to you as soon as possible.</p>
+    <div class="contact-line"><i class="fa-solid fa-phone"></i><div><strong>Call us</strong><br>+256 778 947 496</div></div>
+    <div class="contact-line"><i class="fa-solid fa-envelope"></i><div><strong>Email us</strong><br>dugnaduganda@gmail.com</div></div>
+    <div class="contact-line"><i class="fa-solid fa-location-dot"></i><div><strong>Visit us</strong><br>Kavule Jomayi Estate, Matuga–Semuto Rd., Wakiso</div></div>
+  </div>
+  <div class="form-card reveal">
+    <h3>Enquiry Form</h3>
+    <form action="#" method="POST" onsubmit="event.preventDefault();alert('Thank you! Your enquiry has been received. We will contact you shortly.');this.reset();">
+      <div class="form-row">
+        <div class="form-group"><label for="parentName">Parent / Guardian Name <span class="req">*</span></label><input type="text" id="parentName" name="parentName" required /></div>
+        <div class="form-group"><label for="phone">Phone Number <span class="req">*</span></label><input type="tel" id="phone" name="phone" required /></div>
+      </div>
+      <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" /></div>
+      <div class="form-row">
+        <div class="form-group"><label for="childName">Child's Name <span class="req">*</span></label><input type="text" id="childName" name="childName" required /></div>
+        <div class="form-group"><label for="childAge">Child's Age <span class="req">*</span></label><input type="number" id="childAge" name="childAge" min="1" max="15" required /></div>
+      </div>
+      <div class="form-group">
+        <label for="program">Program of Interest <span class="req">*</span></label>
+        <select id="program" name="program" required>
+          <option value="">Select a program</option>
+          <option value="daycare">Day Care</option>
+          <option value="kindergarten">Kindergarten</option>
+          <option value="primary">Primary 1 – 4</option>
+        </select>
+      </div>
+      <div class="form-group"><label for="message">Message / Questions</label><textarea id="message" name="message" placeholder="Tell us anything we should know…"></textarea></div>
+      <button type="submit" class="btn btn-primary">Submit Enquiry <i class="fa-solid fa-paper-plane"></i></button>
+      <p class="form-note">We typically respond within 1–2 school days.</p>
+    </form>
+  </div>
+</div></section>
+
+<!-- CTA BAND -->
+<section class="cta-band"><div class="container cta-band-inner reveal">
+  <div><h2>Still have questions about admissions?</h2><p>Our office is happy to help — call, email, or visit us.</p></div>
+  <div class="cta-band-buttons"><a href="contact.html" class="btn btn-primary">Contact Us</a><a href="programs.html" class="btn btn-outline">View Programs</a></div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo footer-logo"><div class="logo-badge"><span class="ring ring-red"></span><span class="ring ring-yellow"></span><span class="ring ring-green"></span><span class="logo-text">D</span></div><div class="logo-name"><strong>DUGNAD</strong><span>SCHOOL</span></div></div>
+      <p class="footer-tag">For Tomorrow's Leaders — a learner-centered school in Wakiso District.</p>
+    </div>
+    <div><h4>Quick Links</h4><ul><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+    <div><h4>Programs</h4><ul><li>Day Care</li><li>Kindergarten</li><li>Primary 1 – 4</li></ul></div>
+    <div><h4>Contact</h4><ul><li><i class="fa-solid fa-phone"></i> +256 778 947 496</li><li><i class="fa-solid fa-envelope"></i> dugnaduganda@gmail.com</li><li><i class="fa-solid fa-location-dot"></i> Matuga–Semuto Rd., Wakiso</li></ul></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>© 2026 Dugnad School. All rights reserved. | Designed by [YOUR FULL NAME]</p></div></div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+/* ============ GLOBAL JS (copy into every page) ============ */
+document.addEventListener("DOMContentLoaded",()=>{
+  const hamburger=document.getElementById("hamburger"),nav=document.getElementById("nav");
+  if(hamburger&&nav){
+    hamburger.addEventListener("click",()=>{const o=nav.classList.toggle("open");hamburger.classList.toggle("open",o);hamburger.setAttribute("aria-expanded",o);});
+    nav.querySelectorAll("a").forEach(l=>l.addEventListener("click",()=>{nav.classList.remove("open");hamburger.classList.remove("open");hamburger.setAttribute("aria-expanded","false");}));
+  }
+  const header=document.getElementById("header"),backToTop=document.getElementById("backToTop");
+  window.addEventListener("scroll",()=>{if(header)header.classList.toggle("scrolled",window.scrollY>20);if(backToTop)backToTop.classList.toggle("show",window.scrollY>400);});
+  if(backToTop)backToTop.addEventListener("click",e=>{e.preventDefault();window.scrollTo({top:0,behavior:"smooth"});});
+  const reveal=document.querySelectorAll(".reveal");
+  if("IntersectionObserver"in window&&reveal.length){const ob=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");ob.unobserve(e.target);}});},{threshold:.12});reveal.forEach(el=>ob.observe(el));}
+  else{reveal.forEach(el=>el.classList.add("visible"));}
+});
+/* ============ ADMISSIONS PAGE JS ============ */
+// Smooth-scroll to enquiry form from banner button
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelectorAll('a[href="#enquiry"]').forEach(a=>{
+    a.addEventListener("click",e=>{e.preventDefault();document.getElementById("enquiry").scrollIntoView({behavior:"smooth"});});
+  });
+  console.log("Dugnad School — Admissions page loaded.");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,554 @@
+Here's the updated `programs.html` with all the expanded content added. I've kept your existing structure, styles, and JavaScript intact, and added new sections plus enriched the existing ones.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Dugnad School programs — Day Care, Kindergarten and Primary 1–4. Blended Curriculum, Learner-centered approach, ICT, Child Safety, Balanced diet, Clean environment, School van." />
+<title>Our Programs | Dugnad School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+/* ============ GLOBAL STYLES ============ */
+:root{--red:#C8102E;--red-dark:#a30d25;--green:#1B7A3D;--yellow:#F5C518;--navy:#14213D;--dark:#1B2A4A;--text:#2b2b2b;--muted:#6b7280;--bg:#ffffff;--bg-soft:#f7f9fc;--radius:14px;--shadow:0 10px 30px rgba(20,33,61,.08);--shadow-lg:0 20px 50px rgba(20,33,61,.15);--max:1180px;--transition:all .3s ease}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:"Open Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Poppins",sans-serif;color:var(--navy);line-height:1.2}
+img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-style:none}
+.container{width:92%;max-width:var(--max);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:50px;font-weight:600;font-size:.95rem;font-family:"Poppins",sans-serif;cursor:pointer;border:2px solid transparent;transition:var(--transition);white-space:nowrap}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(200,16,46,.3)}
+.btn-primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 12px 26px rgba(200,16,46,.4)}
+.btn-outline{background:transparent;color:#fff;border-color:#fff}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+.topbar{background:var(--navy);color:#e8edf6;font-size:.82rem}
+.topbar-inner{display:flex;gap:24px;padding:9px 0;flex-wrap:wrap}
+.topbar-item{display:flex;align-items:center;gap:7px}
+.topbar-item i{color:var(--yellow)}
+.header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 14px rgba(0,0,0,.06);transition:var(--transition)}
+.header.scrolled{box-shadow:0 4px 22px rgba(0,0,0,.1)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:18px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{position:relative;width:46px;height:46px;border-radius:50%;background:#fff;border:3px solid var(--red);display:grid;place-items:center;overflow:hidden}
+.ring{position:absolute;border-radius:50%}
+.ring-red{width:46px;height:46px;border:4px solid var(--red)}
+.ring-yellow{width:34px;height:34px;border:3px solid var(--yellow)}
+.ring-green{width:22px;height:22px;border:3px solid var(--green)}
+.logo-text{position:relative;z-index:2;font-weight:800;font-family:"Poppins",sans-serif;color:var(--navy);font-size:1rem}
+.logo-name{display:flex;flex-direction:column;line-height:1}
+.logo-name strong{font-family:"Poppins",sans-serif;font-size:1.15rem;color:var(--navy);letter-spacing:1px}
+.logo-name span{font-size:.68rem;letter-spacing:3px;color:var(--red);font-weight:700}
+.nav{display:flex;align-items:center;gap:4px}
+.nav-link{font-weight:600;font-size:.92rem;padding:9px 14px;border-radius:8px;color:var(--dark);transition:var(--transition);font-family:"Poppins",sans-serif}
+.nav-link:hover,.nav-link.active{color:var(--red);background:#fff1f3}
+.nav-cta{margin-left:8px;padding:10px 22px;font-size:.88rem}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.hamburger span{width:26px;height:3px;background:var(--navy);border-radius:3px;transition:var(--transition)}
+.hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.section{padding:80px 0}
+.section-head{text-align:center;max-width:620px;margin:0 auto 46px}
+.eyebrow{display:inline-block;color:var(--red);font-weight:700;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:"Poppins",sans-serif}
+.section-head h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:12px}
+.section-head p{color:var(--muted)}
+.footer{background:var(--navy);color:#c4d0e0;padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:34px;padding-bottom:40px}
+.footer h4{color:#fff;margin-bottom:16px;font-size:1rem}
+.footer ul li{padding:5px 0;font-size:.9rem}
+.footer ul li a{transition:var(--transition)}
+.footer ul li a:hover{color:var(--yellow)}
+.footer ul li i{color:var(--yellow);margin-right:8px;width:14px}
+.footer-logo{margin-bottom:14px}
+.footer-logo .logo-name strong{color:#fff}
+.footer-tag{font-size:.88rem;line-height:1.6}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:18px 0;text-align:center;font-size:.85rem}
+.back-to-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transition:var(--transition);z-index:900;border:none;cursor:pointer}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--red-dark);transform:translateY(-4px)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){
+  .nav{position:fixed;top:0;right:-100%;width:75%;max-width:320px;height:100vh;background:#fff;flex-direction:column;align-items:stretch;padding:90px 24px 30px;box-shadow:-10px 0 40px rgba(0,0,0,.15);transition:right .35s ease;gap:6px;overflow-y:auto}
+  .nav.open{right:0}
+  .nav-link{font-size:1rem;padding:12px 14px}
+  .nav-cta{margin:10px 0 0}
+  .hamburger{display:flex}
+  .topbar .hide-sm{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.section{padding:60px 0}.topbar-inner{gap:14px;font-size:.75rem}.footer-grid{grid-template-columns:1fr}}
+
+/* ============ PROGRAMS PAGE ONLY ============ */
+.page-hero{background:linear-gradient(135deg,#14213D 0%,#1B7A3D 100%);color:#fff;padding:64px 0;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(245,197,24,.18),transparent 55%)}
+.page-hero h1{color:#fff;font-size:clamp(2rem,4.5vw,3rem);position:relative;margin-bottom:12px}
+.page-hero p{color:#d9e2f0;max-width:620px;margin:0 auto;position:relative}
+.program-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.program-detail{background:#fff;border-radius:var(--radius);padding:32px 26px;box-shadow:var(--shadow);border-top:4px solid var(--green);transition:var(--transition)}
+.program-detail.featured{border-top-color:var(--red)}
+.program-detail:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.program-detail .age-badge{display:inline-block;background:#eef7f1;color:var(--green);font-weight:700;font-size:.78rem;padding:5px 14px;border-radius:50px;margin-bottom:14px;font-family:"Poppins",sans-serif}
+.program-detail.featured .age-badge{background:#fff1f3;color:var(--red)}
+.program-detail h3{font-size:1.3rem;margin-bottom:10px}
+.program-detail p{color:var(--muted);font-size:.92rem;margin-bottom:16px}
+.program-detail ul{font-size:.88rem;color:#4a5568}
+.program-detail ul li{display:flex;gap:9px;padding:5px 0}
+.program-detail ul i{color:var(--green);margin-top:4px;font-size:.75rem}
+.program-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.program-meta span{background:var(--bg-soft);border:1px solid #e3e9f2;color:var(--dark);font-size:.76rem;font-weight:600;padding:4px 11px;border-radius:50px;font-family:"Poppins",sans-serif}
+.program-meta i{color:var(--red);margin-right:4px}
+.program-detail .outcome{margin-top:14px;padding-top:14px;border-top:1px dashed #e3e9f2;font-size:.84rem;color:#4a5568}
+.program-detail .outcome strong{color:var(--navy);display:block;margin-bottom:4px;font-family:"Poppins",sans-serif;font-size:.82rem}
+
+/* SAMPLE TIMETABLE */
+.timetable-wrap{max-width:760px;margin:0 auto;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.timetable-wrap h3{background:var(--navy);color:#fff;padding:18px 24px;font-size:1.05rem;display:flex;align-items:center;gap:10px}
+.timetable-wrap h3 i{color:var(--yellow)}
+.timetable{width:100%;border-collapse:collapse;font-size:.9rem}
+.timetable th,.timetable td{padding:12px 18px;text-align:left;border-bottom:1px solid #eef1f6}
+.timetable thead th{background:#f2f6fb;color:var(--navy);font-family:"Poppins",sans-serif;font-size:.8rem;letter-spacing:.5px;text-transform:uppercase}
+.timetable tbody tr:last-child td{border-bottom:none}
+.timetable td:first-child{font-weight:600;color:var(--navy);white-space:nowrap;width:150px}
+.timetable tbody tr:hover{background:#fafbfe}
+
+/* WHAT WE OFFER SECTION (Direct from brochure) */
+.offer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.offer-card{background:#fff;border-radius:var(--radius);padding:24px 20px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start;transition:var(--transition);border-left:4px solid var(--yellow)}
+.offer-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.offer-card i{font-size:1.5rem;color:var(--red);margin-top:2px}
+.offer-card h3{font-size:1rem;margin-bottom:4px}
+.offer-card p{font-size:.85rem;color:var(--muted)}
+
+.lab-band{background:var(--navy);color:#fff;border-radius:22px;padding:46px 40px;display:grid;grid-template-columns:1.2fr 1fr;gap:38px;align-items:center;margin-top:60px}
+.lab-band h2{color:#fff;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:14px}
+.lab-band p{color:#c4d0e0;margin-bottom:18px}
+.lab-band .lab-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(245,197,24,.15);color:var(--yellow);border:1px solid rgba(245,197,24,.4);padding:6px 14px;border-radius:50px;font-weight:600;font-size:.8rem;margin-bottom:16px}
+.lab-features{display:grid;gap:12px}
+.lab-features li{display:flex;gap:12px;align-items:flex-start;color:#e8edf6;font-size:.92rem}
+.lab-features i{color:var(--yellow);margin-top:4px}
+.lab-visual{background:linear-gradient(135deg,#1B7A3D,#14213D);border-radius:18px;aspect-ratio:4/3;display:grid;place-items:center;border:4px solid rgba(255,255,255,.1)}
+.lab-visual i{font-size:4rem;color:var(--yellow);opacity:.9}
+.lab-stats{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px}
+.lab-stats div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 18px;text-align:center;flex:1;min-width:100px}
+.lab-stats strong{display:block;font-family:"Poppins",sans-serif;font-size:1.4rem;color:var(--yellow);line-height:1}
+.lab-stats span{font-size:.75rem;color:#c4d0e0}
+
+.clubs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.club-card{background:#fff;border-radius:var(--radius);padding:24px 20px;text-align:center;box-shadow:var(--shadow);transition:var(--transition);border-bottom:3px solid transparent}
+.club-card:hover{transform:translateY(-6px);border-bottom-color:var(--yellow)}
+.club-card i{font-size:1.7rem;color:var(--red);margin-bottom:10px}
+.club-card h3{font-size:1rem;margin-bottom:4px}
+.club-card p{font-size:.82rem;color:var(--muted)}
+.club-card .club-when{display:inline-block;margin-top:10px;font-size:.74rem;font-weight:600;color:var(--green);background:#eef7f1;padding:3px 10px;border-radius:50px;font-family:"Poppins",sans-serif}
+
+/* SCHOOL INFO STRIP */
+.info-strip{background:var(--bg-soft)}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.info-card{background:#fff;border-radius:var(--radius);padding:26px 22px;box-shadow:var(--shadow);text-align:center;transition:var(--transition)}
+.info-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.info-card i{font-size:1.8rem;color:var(--green);margin-bottom:12px}
+.info-card h3{font-size:1rem;margin-bottom:6px}
+.info-card p{font-size:.86rem;color:var(--muted)}
+.info-card p strong{color:var(--navy);display:block;margin-top:6px;font-size:.82rem}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi-card{background:#fff;border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);position:relative;border-top:4px solid var(--yellow);transition:var(--transition)}
+.testi-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.testi-card .quote-mark{font-size:2rem;color:var(--yellow);line-height:1;margin-bottom:8px;font-family:"Poppins",sans-serif}
+.testi-card p{font-size:.9rem;color:#4a5568;font-style:italic;margin-bottom:16px}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--navy));color:#fff;display:grid;place-items:center;font-weight:700;font-family:"Poppins",sans-serif;font-size:.95rem;flex-shrink:0}
+.testi-author strong{display:block;font-family:"Poppins",sans-serif;font-size:.88rem;color:var(--navy)}
+.testi-author span{font-size:.78rem;color:var(--muted)}
+
+/* FAQ */
+.faq-wrap{max-width:820px;margin:0 auto}
+.faq-item{background:#fff;border-radius:12px;box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden;border-left:4px solid var(--green)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-family:"Poppins",sans-serif;font-weight:600;font-size:.95rem;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;transition:var(--transition)}
+.faq-q:hover{color:var(--red)}
+.faq-q i{color:var(--red);font-size:.8rem;transition:transform .3s ease;flex-shrink:0}
+.faq-item.open .faq-q i{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 20px;font-size:.88rem;color:var(--muted);line-height:1.7}
+
+.cta-band{background:linear-gradient(135deg,#C8102E,#a30d25);color:#fff;padding:56px 0}
+.cta-band-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta-band h2{color:#fff;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:6px}
+.cta-band p{color:#ffd9e0}
+.cta-band-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.cta-band .btn-outline{border-color:#fff;color:#fff}
+.cta-band .btn-outline:hover{background:#fff;color:var(--red)}
+@media(max-width:900px){.program-detail-grid,.clubs-grid,.testi-grid{grid-template-columns:1fr}.lab-band{grid-template-columns:1fr;padding:34px 24px}.lab-visual{order:-1}}
+@media(max-width:560px){.timetable td:first-child{width:110px;font-size:.8rem}.timetable th,.timetable td{padding:10px 12px}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar"><div class="container topbar-inner">
+  <div class="topbar-item"><i class="fa-solid fa-phone"></i> +256 (0) 778 947 496</div>
+  <div class="topbar-item"><i class="fa-solid fa-envelope"></i> dugnaduganda@gmail.com</div>
+  <div class="topbar-item hide-sm"><i class="fa-solid fa-location-dot"></i> Kavule Jomayi Estate, Matuga–Semuto Rd.</div>
+</div></div>
+
+<!-- HEADER -->
+<header class="header" id="header"><div class="container nav-inner">
+  <a href="index.html" class="logo">
+    <div class="logo-badge"><span class="ring ring-red"></span><span class="ring ring-yellow"></span><span class="ring ring-green"></span><span class="logo-image"><img src="logo.png"/></span></div>
+    <div class="logo-name"><strong>DUGNAD</strong><span>SCHOOL</span></div>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="programs.html" class="nav-link active">Programs</a>
+    <a href="why-us.html" class="nav-link">Why Dugnad</a>
+    <a href="gallery.html" class="nav-link">Gallery</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="admissions.html" class="btn btn-primary nav-cta">Enroll Now</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Our Programs</h1>
+    <p>Day Care | Kindergarten | P1 – P4 — built on our motto, <strong>We Learn by Doing</strong>.</p>
+  </div>
+</section>
+
+<!-- PROGRAM DETAILS -->
+<section class="section"><div class="container">
+  <div class="program-detail-grid">
+    <article class="program-detail reveal">
+      <span class="age-badge">Day Care</span>
+      <h3>Day Care</h3>
+      <div class="program-meta">
+        <span><i class="fa-solid fa-baby"></i> 6 months – 3 years</span>
+        <span><i class="fa-solid fa-users"></i> 1:6 caregiver ratio</span>
+        <span><i class="fa-solid fa-clock"></i> 7:00am – 5:00pm</span>
+      </div>
+      <p>A warm, safe and stimulating home-away-from-home where our youngest learners are cared for and begin to explore.</p>
+      <ul>
+        <li><i class="fa-solid fa-circle"></i> Nurturing, trained caregivers</li>
+        <li><i class="fa-solid fa-circle"></i> Sensory &amp; play activities</li>
+        <li><i class="fa-solid fa-circle"></i> Safe, child-friendly spaces</li>
+        <li><i class="fa-solid fa-circle"></i> Balanced diet &amp; routine</li>
+        <li><i class="fa-solid fa-circle"></i> Nap time &amp; hygiene support</li>
+      </ul>
+      <div class="outcome"><strong>By the end of Day Care, your child will:</strong> feel secure in a group, follow simple routines, and show curiosity through play.</div>
+    </article>
+
+    <article class="program-detail featured reveal">
+      <span class="age-badge">Kindergarten</span>
+      <h3>Kindergarten</h3>
+      <div class="program-meta">
+        <span><i class="fa-solid fa-child"></i> 3 – 6 years</span>
+        <span><i class="fa-solid fa-users"></i> 1:12 teacher ratio</span>
+        <span><i class="fa-solid fa-clock"></i> 7:30am – 5:00pm</span>
+      </div>
+      <p>Play-based, activity-driven early education that builds curiosity, confidence and foundational skills.</p>
+      <ul>
+        <li><i class="fa-solid fa-circle"></i> Blended curriculum</li>
+        <li><i class="fa-solid fa-circle"></i> Learner-centered approach</li>
+        <li><i class="fa-solid fa-circle"></i> Creative play &amp; music</li>
+        <li><i class="fa-solid fa-circle"></i> Social &amp; emotional growth</li>
+        <li><i class="fa-solid fa-circle"></i> Early literacy &amp; numeracy</li>
+      </ul>
+      <div class="outcome"><strong>By the end of Kindergarten, your child will:</strong> recognize letters and numbers, follow instructions, and transition confidently into Primary 1.</div>
+    </article>
+
+    <article class="program-detail reveal">
+      <span class="age-badge">Primary 1 – 4</span>
+      <h3>Primary 1 – 4</h3>
+      <div class="program-meta">
+        <span><i class="fa-solid fa-book"></i> 6 – 10 years</span>
+        <span><i class="fa-solid fa-users"></i> 1:20 teacher ratio</span>
+        <span><i class="fa-solid fa-clock"></i> 7:00am – 5:00pm</span>
+      </div>
+      <p>An activity-based primary curriculum balancing strong academics with character and hands-on learning.</p>
+      <ul>
+        <li><i class="fa-solid fa-circle"></i> Learner-centered teaching</li>
+        <li><i class="fa-solid fa-circle"></i> ICT integration</li>
+        <li><i class="fa-solid fa-circle"></i> Clubs &amp; co-curricular activities</li>
+        <li><i class="fa-solid fa-circle"></i> Clean &amp; safe environment</li>
+        <li><i class="fa-solid fa-circle"></i> Regular assessment &amp; feedback</li>
+      </ul>
+      <div class="outcome"><strong>By the end of Primary 4, your child will:</strong> read and write confidently, solve age-appropriate problems, and use digital tools for learning.</div>
+    </article>
+  </div>
+
+  <!-- SAMPLE TIMETABLE -->
+  <div class="timetable-wrap reveal" style="margin-top:56px">
+    <h3><i class="fa-solid fa-calendar-days"></i> Sample Daily Timetable (Kindergarten)</h3>
+    <table class="timetable">
+      <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+      <tbody>
+        <tr><td>7:30 – 8:00</td><td>Arrival, free play &amp; welcome circle</td></tr>
+        <tr><td>8:00 – 8:30</td><td>Morning assembly &amp; songs</td></tr>
+        <tr><td>8:30 – 9:30</td><td>Literacy &amp; phonics (activity-based)</td></tr>
+        <tr><td>9:30 – 10:00</td><td>Snack &amp; hygiene break</td></tr>
+        <tr><td>10:00 – 11:00</td><td>Numeracy &amp; hands-on math</td></tr>
+        <tr><td>11:00 – 12:00</td><td>Outdoor play &amp; sports</td></tr>
+        <tr><td>12:00 – 1:00</td><td>Lunch (balanced diet)</td></tr>
+        <tr><td>1:00 – 2:00</td><td>Nap / quiet time</td></tr>
+        <tr><td>2:00 – 3:00</td><td>Creative arts, music &amp; drama</td></tr>
+        <tr><td>3:00 – 4:00</td><td>ICT / Leap Learning Lab (rotating)</td></tr>
+        <tr><td>4:00 – 5:00</td><td>Clubs, story time &amp; departure</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- LEAP LEARNING LAB -->
+  <div class="lab-band reveal">
+    <div>
+      <span class="lab-tag"><i class="fa-solid fa-laptop-code"></i> ICT Integration</span>
+      <h2>The Leap Learning Lab</h2>
+      <p>Our computer learning lab brings technology into everyday learning — giving children hands-on access to digital tools and interactive learning.</p>
+      <ul class="lab-features">
+        <li><i class="fa-solid fa-check"></i> Tablets with 200+ learning apps</li>
+        <li><i class="fa-solid fa-check"></i> Supervised, age-appropriate screen time</li>
+        <li><i class="fa-solid fa-check"></i> Builds digital literacy from an early age</li>
+        <li><i class="fa-solid fa-check"></i> Supported by our Norwegian partnership</li>
+        <li><i class="fa-solid fa-check"></i> Weekly scheduled sessions for every class</li>
+      </ul>
+      <div class="lab-stats">
+        <div><strong>200+</strong><span>Learning apps</span></div>
+        <div><strong>1×</strong><span>Weekly session per class</span></div>
+        <div><strong>100%</strong><span>Supervised use</span></div>
+      </div>
+    </div>
+    <div class="lab-visual"><i class="fa-solid fa-tablet-screen-button"></i></div>
+  </div>
+</div></section>
+
+<!-- WHAT WE OFFER (Brochure Exact + Expanded) -->
+<section class="section" style="background:var(--bg-soft)"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow">What We Offer</span><h2>Holistic Learning Environment</h2><p>Everything your child needs to thrive — as outlined in our school brochure.</p></div>
+  <div class="offer-grid">
+    <div class="offer-card reveal"><i class="fa-solid fa-book-open"></i><div><h3>Blended Curriculum</h3><p>We combine the Ugandan national curriculum (NCDC) with proven international early-learning methods for a well-rounded foundation.</p></div></div>
+    <div class="offer-card reveal"><i class="fa-solid fa-child-reaching"></i><div><h3>Learner-Centered Approach</h3><p>Teaching that focuses on the individual needs and pace of each child, with small classes and personal attention.</p></div></div>
+    <div class="offer-card reveal"><i class="fa-solid fa-laptop-code"></i><div><h3>ICT</h3><p>Integrating technology into everyday learning for digital literacy — from tablets in Kindergarten to coding in Primary.</p></div></div>
+    <div class="offer-card reveal"><i class="fa-solid fa-shield-halved"></i><div><h3>Child Safety</h3><p>A secure, caring environment with vetted staff, a supervised campus, first-aid trained teachers and a clear visitor policy.</p></div></div>
+    <div class="offer-card reveal"><i class="fa-solid fa-apple-whole"></i><div><h3>Balanced Diet</h3><p>Nutritious, freshly prepared meals and snacks that support healthy growth. Allergies and dietary needs are accommodated.</p></div></div>
+    <div class="offer-card reveal"><i class="fa-solid fa-broom"></i><div><h3>Clean Environment</h3><p>A hygienic, well-maintained campus with daily cleaning, safe play areas and clean water — for healthy learning.</p></div></div>
+    <div class="offer-card reveal"><i class="fa-solid fa-bus"></i><div><h3>School Van</h3><p>Safe, reliable pickup and drop-off on scheduled routes, driven by trained staff with child-safety checks.</p></div></div>
+  </div>
+</div></section>
+
+<!-- SCHOOL INFO STRIP -->
+<section class="section info-strip"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow">Good to Know</span><h2>School Hours &amp; Logistics</h2><p>The practical details parents ask about most.</p></div>
+  <div class="info-grid">
+    <div class="info-card reveal"><i class="fa-solid fa-clock"></i><h3>School Hours</h3><p>Monday – Friday<br><strong>7:00am – 5:00pm</strong></p></div>
+    <div class="info-card reveal"><i class="fa-solid fa-calendar"></i><h3>Term Dates</h3><p>Three terms per year, following the Ugandan school calendar.<strong>Contact us for current term dates.</strong></p></divHere is the completed HTML code for the Dugnad School programs page, including the finished "Good to Know" section, testimonials, FAQ, and a final call-to-action.
+```html
+<!-- SCHOOL INFO STRIP (continued) -->
+    <div class="info-card reveal"><i class="fa-solid fa-bus"></i><h3>School Van</h3><p>Pick-up &amp; drop-off on scheduled routes.<strong>Ask about your area.</strong></p></div>
+    <div class="info-card reveal"><i class="fa-solid fa-utensils"></i><h3>Meals</h3><p>Balanced breakfast, lunch &amp; snack.<strong>Dietary needs accommodated.</strong></p></div>
+    <div class="info-card reveal"><i class="fa-solid fa-phone"></i><h3>Contact</h3><p>+256 (0) 778 947 496<br><strong>dugnaduganda@gmail.com</strong></p></div>
+  </div>
+</div></section>
+
+<!-- TESTIMONIALS -->
+<section class="section"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow">Parent Voices</span><h2>What Families Say</h2><p>Real feedback from parents in our Dugnad community.</p></div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="quote-mark">&ldquo;</div>
+      <p>My daughter started in Day Care and is now in Kindergarten. The caregivers are patient and kind, and she comes home excited about what she learned every single day.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">NA</div>
+        <div><strong>Nakato A.</strong><span>Parent, Kindergarten</span></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="quote-mark">&ldquo;</div>
+      <p>The Leap Learning Lab is a game changer. My son is in P2 and already knows how to use a tablet for learning — not just games. The ICT integration is real.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">JM</div>
+        <div><strong>James M.</strong><span>Parent, Primary 2</span></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="quote-mark">&ldquo;</div>
+      <p>What sold us was the safety and the food. The campus is clean, the van is reliable, and I never worry about my child's well-being while I'm at work.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">SG</div>
+        <div><strong>Sarah G.</strong><span>Parent, Day Care &amp; P1</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--bg-soft)"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow">Questions?</span><h2>Frequently Asked</h2><p>Quick answers to common questions about our programs.</p></div>
+  <div class="faq-wrap">
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">What ages do you accept?<i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a"><p>We accept children from 6 months (Day Care) through Primary 4 (approximately 10 years). Each program has a dedicated age band and age-appropriate facilities.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Is the school van available in my area?<i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a"><p>Our van covers scheduled routes around Kavule, Jomayi Estate, Matuga, and Semuto Road. Contact the office to confirm whether your location is on an existing route or can be added.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">How do you handle child safety?<i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a"><p>All staff are vetted and first-aid trained. The campus is supervised throughout the day, visitors must sign in, and our school van follows strict child-safety check procedures at every pickup and drop-off.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">What curriculum do you follow?<i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a"><p>We blend the Ugandan national curriculum (NCDC) with proven international early-learning methods. Our learner-centered approach means each child progresses at their own pace with plenty of hands-on activities.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Can you accommodate allergies or special diets?<i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a"><p>Yes. Our kitchen prepares balanced meals daily and we accommodate documented allergies and dietary requirements. Please inform us during enrollment so we can plan accordingly.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">How do I enroll my child?<i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a"><p>Visit our Admissions page or contact the office directly. We'll guide you through the application, required documents, and a campus tour so you can see our programs in action.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container cta-band-inner">
+    <div>
+      <h2>Ready to Give Your Child a Strong Start?</h2>
+      <p>Enroll today or book a visit to see our programs firsthand.</p>
+    </div>
+    <div class="cta-band-buttons">
+      <a href="admissions.html" class="btn btn-outline">Enroll Now</a>
+      <a href="contact.html" class="btn btn-outline">Book a Visit</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo footer-logo">
+          <div class="logo-badge"><span class="ring ring-red"></span><span class="ring ring-yellow"></span><span class="ring ring-green"></span><span class="logo-text">D</span></div>
+          <div class="logo-name"><strong>DUGNAD</strong><span>SCHOOL</span></div>
+        </div>
+        <p class="footer-tag">We Learn by Doing. A warm, learner-centered school for Day Care, Kindergarten and Primary 1–4 — rooted in the Dugnad spirit of community and shared effort.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="programs.html"><i class="fa-solid fa-chevron-right"></i> Programs</a></li>
+          <li><a href="why-us.html"><i class="fa-solid fa-chevron-right"></i> Why Dugnad</a></li>
+          <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="programs.html"><i class="fa-solid fa-chevron-right"></i> Day Care</a></li>
+          <li><a href="programs.html"><i class="fa-solid fa-chevron-right"></i> Kindergarten</a></li>
+          <li><a href="programs.html"><i class="fa-solid fa-chevron-right"></i> Primary 1 – 4</a></li>
+          <li><a href="programs.html"><i class="fa-solid fa-chevron-right"></i> Leap Learning Lab</a></li>
+          <li><a href="admissions.html"><i class="fa-solid fa-chevron-right"></i> Admissions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Kavule Jomayi Estate, Matuga–Semuto Rd.</li>
+          <li><i class="fa-solid fa-phone"></i> +256 (0) 778 947 496</li>
+          <li><i class="fa-solid fa-envelope"></i> dugnaduganda@gmail.com</li>
+          <li><i class="fa-solid fa-clock"></i> Mon – Fri: 7:00am – 5:00pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Dugnad School. All rights reserved. &nbsp;|&nbsp; We Learn by Doing.
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+/* ============ MOBILE NAV ============ */
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+hamburger.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
+});
+
+/* ============ HEADER SCROLL ============ */
+const header = document.getElementById('header');
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  header.classList.toggle('scrolled', y > 20);
+  backToTop.classList.toggle('show', y > 400);
+});
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ============ REVEAL ON SCROLL ============ */
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ============ FAQ ACCORDION ============ */
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-a');
+    const isOpen = item.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+
+    // Open clicked (if it was closed)
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+/* ============ YEAR ============ */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+```

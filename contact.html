@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Contact Dugnad School — visit us at Kavule Jomayi Estate, Matuga–Semuto Rd., Wakiso District. Call, email, or send a message." />
+<title>Contact Us | Dugnad School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+/* ============ GLOBAL STYLES (copy into every page) ============ */
+:root{--red:#C8102E;--red-dark:#a30d25;--green:#1B7A3D;--yellow:#F5C518;--navy:#14213D;--dark:#1B2A4A;--text:#2b2b2b;--muted:#6b7280;--bg:#ffffff;--bg-soft:#f7f9fc;--radius:14px;--shadow:0 10px 30px rgba(20,33,61,.08);--shadow-lg:0 20px 50px rgba(20,33,61,.15);--max:1180px;--transition:all .3s ease}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:"Open Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Poppins",sans-serif;color:var(--navy);line-height:1.2}
+img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-style:none}
+.container{width:92%;max-width:var(--max);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:50px;font-weight:600;font-size:.95rem;font-family:"Poppins",sans-serif;cursor:pointer;border:2px solid transparent;transition:var(--transition);white-space:nowrap}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(200,16,46,.3)}
+.btn-primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 12px 26px rgba(200,16,46,.4)}
+.btn-outline{background:transparent;color:#fff;border-color:#fff}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+.btn-block{width:100%}
+.topbar{background:var(--navy);color:#e8edf6;font-size:.82rem}
+.topbar-inner{display:flex;gap:24px;padding:9px 0;flex-wrap:wrap}
+.topbar-item{display:flex;align-items:center;gap:7px}
+.topbar-item i{color:var(--yellow)}
+.header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 14px rgba(0,0,0,.06);transition:var(--transition)}
+.header.scrolled{box-shadow:0 4px 22px rgba(0,0,0,.1)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:18px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{position:relative;width:46px;height:46px;border-radius:50%;background:#fff;border:3px solid var(--red);display:grid;place-items:center;overflow:hidden}
+.ring{position:absolute;border-radius:50%}
+.ring-red{width:46px;height:46px;border:4px solid var(--red)}
+.ring-yellow{width:34px;height:34px;border:3px solid var(--yellow)}
+.ring-green{width:22px;height:22px;border:3px solid var(--green)}
+.logo-text{position:relative;z-index:2;font-weight:800;font-family:"Poppins",sans-serif;color:var(--navy);font-size:1rem}
+.logo-name{display:flex;flex-direction:column;line-height:1}
+.logo-name strong{font-family:"Poppins",sans-serif;font-size:1.15rem;color:var(--navy);letter-spacing:1px}
+.logo-name span{font-size:.68rem;letter-spacing:3px;color:var(--red);font-weight:700}
+.nav{display:flex;align-items:center;gap:4px}
+.nav-link{font-weight:600;font-size:.92rem;padding:9px 14px;border-radius:8px;color:var(--dark);transition:var(--transition);font-family:"Poppins",sans-serif}
+.nav-link:hover,.nav-link.active{color:var(--red);background:#fff1f3}
+.nav-cta{margin-left:8px;padding:10px 22px;font-size:.88rem}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.hamburger span{width:26px;height:3px;background:var(--navy);border-radius:3px;transition:var(--transition)}
+.hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.section{padding:80px 0}
+.section-head{text-align:center;max-width:620px;margin:0 auto 46px}
+.eyebrow{display:inline-block;color:var(--red);font-weight:700;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:"Poppins",sans-serif}
+.section-head h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:12px}
+.section-head p{color:var(--muted)}
+.footer{background:var(--navy);color:#c4d0e0;padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:34px;padding-bottom:40px}
+.footer h4{color:#fff;margin-bottom:16px;font-size:1rem}
+.footer ul li{padding:5px 0;font-size:.9rem}
+.footer ul li a{transition:var(--transition)}
+.footer ul li a:hover{color:var(--yellow)}
+.footer ul li i{color:var(--yellow);margin-right:8px;width:14px}
+.footer-logo{margin-bottom:14px}
+.footer-logo .logo-name strong{color:#fff}
+.footer-tag{font-size:.88rem;line-height:1.6}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:18px 0;text-align:center;font-size:.85rem}
+.back-to-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transition:var(--transition);z-index:900;border:none;cursor:pointer}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--red-dark);transform:translateY(-4px)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){
+  .nav{position:fixed;top:0;right:-100%;width:75%;max-width:320px;height:100vh;background:#fff;flex-direction:column;align-items:stretch;padding:90px 24px 30px;box-shadow:-10px 0 40px rgba(0,0,0,.15);transition:right .35s ease;gap:6px;overflow-y:auto}
+  .nav.open{right:0}
+  .nav-link{font-size:1rem;padding:12px 14px}
+  .nav-cta{margin:10px 0 0}
+  .hamburger{display:flex}
+  .topbar .hide-sm{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.section{padding:60px 0}.topbar-inner{gap:14px;font-size:.75rem}.footer-grid{grid-template-columns:1fr}}
+
+/* ============ CONTACT PAGE ONLY ============ */
+.page-banner{background:linear-gradient(135deg,#14213D 0%,#1B7A3D 100%);color:#fff;padding:80px 0 70px;position:relative;overflow:hidden}
+.page-banner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(245,197,24,.18),transparent 55%)}
+.page-banner-inner{position:relative;text-align:center;max-width:720px;margin:0 auto}
+.page-banner h1{color:#fff;font-size:clamp(2rem,4.5vw,3rem);font-weight:800;margin-bottom:14px}
+.page-banner p{color:#d9e2f0;font-size:1.02rem}
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:56px}
+.contact-card{background:#fff;border-radius:var(--radius);padding:32px 26px;box-shadow:var(--shadow);text-align:center;transition:var(--transition);border-top:4px solid var(--green)}
+.contact-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.contact-card:nth-child(2){border-top-color:var(--red)}
+.contact-card:nth-child(3){border-top-color:var(--yellow)}
+.contact-card-icon{width:64px;height:64px;border-radius:50%;background:#e8f5ee;color:var(--green);display:grid;place-items:center;font-size:1.5rem;margin:0 auto 18px}
+.contact-card:nth-child(2) .contact-card-icon{background:#fff1f3;color:var(--red)}
+.contact-card:nth-child(3) .contact-card-icon{background:#fff8e1;color:#b88a00}
+.contact-card h3{font-size:1.1rem;margin-bottom:6px}
+.contact-card p{color:var(--muted);font-size:.9rem;margin-bottom:14px}
+.contact-card a{font-family:"Poppins",sans-serif;font-weight:700;color:var(--navy);font-size:.95rem;transition:var(--transition);word-break:break-word}
+.contact-card a:hover{color:var(--red)}
+.form-map-wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start}
+.form-card{background:#fff;border-radius:var(--radius);padding:34px 30px;box-shadow:var(--shadow)}
+.form-card h3{font-size:1.25rem;margin-bottom:6px}
+.form-card .form-sub{color:var(--muted);font-size:.88rem;margin-bottom:22px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:6px;font-family:"Poppins",sans-serif}
+.form-group label .req{color:var(--red)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-family:"Open Sans",sans-serif;font-size:.92rem;color:var(--text);background:#fff;transition:var(--transition)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(200,16,46,.1)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-card .btn{width:100%;margin-top:6px}
+.form-note{font-size:.76rem;color:var(--muted);text-align:center;margin-top:12px}
+.map-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.map-frame{aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy),var(--green));display:grid;place-items:center;color:#fff;position:relative;overflow:hidden}
+.map-frame::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(245,197,24,.15),transparent 60%)}
+.map-placeholder{position:relative;text-align:center;padding:30px;z-index:1}
+.map-placeholder i{font-size:3rem;color:var(--yellow);margin-bottom:14px}
+.map-placeholder h3{color:#fff;font-size:1.2rem;margin-bottom:8px}
+.map-placeholder p{color:#d9e2f0;font-size:.9rem;max-width:280px;margin:0 auto 18px}
+.map-placeholder .btn{padding:10px 22px;font-size:.85rem}
+.map-body{padding:24px 26px}
+.map-body h3{font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.map-body h3 i{color:var(--red)}
+.map-body p{font-size:.9rem;color:#4a5568;margin-bottom:12px}
+.map-body .dir-item{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:#4a5568;padding:6px 0}
+.map-body .dir-item i{color:var(--green);margin-top:5px;font-size:.8rem;flex-shrink:0}
+.hours-band{background:var(--bg-soft)}
+.hours-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:center}
+.hours-text h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px}
+.hours-text p{color:#4a5568;margin-bottom:20px}
+.hours-text .socials{display:flex;gap:10px;margin-top:6px}
+.hours-text .socials a{width:44px;height:44px;border-radius:12px;background:#fff;color:var(--navy);display:grid;place-items:center;font-size:1.05rem;box-shadow:var(--shadow);transition:var(--transition)}
+.hours-text .socials a:hover{background:var(--red);color:#fff;transform:translateY(-3px)}
+.hours-card{background:#fff;border-radius:var(--radius);padding:32px 30px;box-shadow:var(--shadow)}
+.hours-card h3{font-size:1.15rem;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.hours-card h3 i{color:var(--yellow)}
+.hours-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px dashed #eef1f6;font-size:.92rem}
+.hours-row:last-child{border-bottom:none}
+.hours-row span:first-child{font-weight:600;color:var(--navy)}
+.hours-row span:last-child{color:var(--muted)}
+.hours-row .closed{color:var(--red);font-weight:600}
+.cta-band{background:linear-gradient(135deg,#C8102E,#a30d25);color:#fff;padding:56px 0}
+.cta-band-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta-band h2{color:#fff;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:6px}
+.cta-band p{color:#ffd9e0}
+.cta-band-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.cta-band .btn-outline{border-color:#fff;color:#fff}
+.cta-band .btn-outline:hover{background:#fff;color:var(--red)}
+@media(max-width:900px){.contact-cards{grid-template-columns:1fr}.form-map-wrap{grid-template-columns:1fr}.hours-wrap{grid-template-columns:1fr}}
+@media(max-width:560px){.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar"><div class="container topbar-inner">
+  <div class="topbar-item"><i class="fa-solid fa-phone"></i> +256 778 947 496</div>
+  <div class="topbar-item"><i class="fa-solid fa-envelope"></i> dugnaduganda@gmail.com</div>
+  <div class="topbar-item hide-sm"><i class="fa-solid fa-location-dot"></i> Kavule Jomayi Estate, Matuga–Semuto Rd.</div>
+</div></div>
+
+<!-- HEADER -->
+<header class="header" id="header"><div class="container nav-inner">
+  <a href="index.html" class="logo">
+    <div class="logo-badge"><span class="ring ring-red"></span><span class="ring ring-yellow"></span><span class="ring ring-green"></span><span class="logo-image"><img src="logo.png"/></span></div>
+    <div class="logo-name"><strong>DUGNAD</strong><span>SCHOOL</span></div>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="programs.html" class="nav-link">Programs</a>
+    <a href="why-us.html" class="nav-link">Why Dugnad</a>
+    <a href="gallery.html" class="nav-link">Gallery</a>
+    <a href="contact.html" class="nav-link active">Contact</a>
+    <a href="admissions.html" class="btn btn-primary nav-cta">Enroll Now</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+
+<!-- PAGE BANNER -->
+<section class="page-banner">
+  <div class="container page-banner-inner reveal">
+    <span class="eyebrow" style="color:var(--yellow)">Contact Us</span>
+    <h1>We'd Love to Hear From You</h1>
+    <p>Call, email, or visit us — or send a message and we'll get back to you within 1–2 school days.</p>
+  </div>
+</section>
+
+<!-- CONTACT CARDS -->
+<section class="section"><div class="container">
+  <div class="contact-cards">
+    <div class="contact-card reveal">
+      <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+      <h3>Call Us</h3>
+      <p>Mon–Fri, during office hours</p>
+      <a href="tel:+256778947496">+256 778 947 496</a>
+    </div>
+    <div class="contact-card reveal">
+      <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+      <h3>Email Us</h3>
+      <p>We reply within 1–2 school days</p>
+      <a href="mailto:dugnaduganda@gmail.com">dugnaduganda@gmail.com</a>
+    </div>
+    <div class="contact-card reveal">
+      <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <h3>Visit Us</h3>
+      <p>Kavule Jomayi Estate, Matuga–Semuto Rd., Wakiso</p>
+      <a href="#map">Get directions <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- FORM + MAP -->
+  <div class="form-map-wrap">
+    <div class="form-card reveal">
+      <h3>Send a Message</h3>
+      <p class="form-sub">Fill in the form below and we'll be in touch.</p>
+      <form action="#" method="POST" onsubmit="event.preventDefault();alert('Thank you! Your message has been sent. We will get back to you shortly.');this.reset();">
+        <div class="form-row">
+          <div class="form-group"><label for="name">Full Name <span class="req">*</span></label><input type="text" id="name" name="name" required /></div>
+          <div class="form-group"><label for="phone">Phone Number <span class="req">*</span></label><input type="tel" id="phone" name="phone" required /></div>
+        </div>
+        <div class="form-group"><label for="email">Email Address <span class="req">*</span></label><input type="email" id="email" name="email" required /></div>
+        <div class="form-group">
+          <label for="subject">Subject <span class="req">*</span></label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a topic</option>
+            <option value="admissions">Admissions Enquiry</option>
+            <option value="tour">Book a School Tour</option>
+            <option value="fees">Fees &amp; Payments</option>
+            <option value="transport">School Van / Transport</option>
+            <option value="general">General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="message">Message <span class="req">*</span></label><textarea id="message" name="message" placeholder="How can we help?" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        <p class="form-note">We respect your privacy and never share your details.</p>
+      </form>
+    </div>
+
+    <div class="map-card reveal" id="map">
+      <div class="map-frame">
+        <div class="map-placeholder">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <h3>Find Us on the Map</h3>
+          <p>Kavule Jomayi Estate, Matuga–Semuto Road, Wakiso District</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Kavule+Jomayi+Estate+Matuga+Semuto+Road+Wakiso" target="_blank" rel="noopener" class="btn btn-primary">Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="map-body">
+        <h3><i class="fa-solid fa-compass"></i> How to Find Us</h3>
+        <p>We're located in Kavule Jomayi Estate, just off the Matuga–Semuto Road in Wakiso District.</p>
+        <div class="dir-item"><i class="fa-solid fa-circle-check"></i> Turn off the Matuga–Semuto Road at the Jomayi Estate entrance</div>
+        <div class="dir-item"><i class="fa-solid fa-circle-check"></i> Follow the signage to the Dugnad School gate</div>
+        <div class="dir-item"><i class="fa-solid fa-circle-check"></i> Free parking is available on-site for visitors</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- HOURS + SOCIALS -->
+<section class="section hours-band"><div class="container hours-wrap">
+  <div class="hours-text reveal">
+    <span class="eyebrow">Visit or Reach Out</span>
+    <h2>Office Hours &amp; Socials</h2>
+    <p>Our office is open during school days. You're welcome to call ahead or drop by — we'd be glad to meet you.</p>
+    <p>Follow us for updates, photos, and school news.</p>
+    <div class="socials">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+  <div class="hours-card reveal">
+    <h3><i class="fa-solid fa-clock"></i> Office Hours</h3>
+    <div class="hours-row"><span>Monday – Friday</span><span>7:30 AM – 5:00 PM</span></div>
+    <div class="hours-row"><span>Saturday</span><span>9:00 AM – 1:00 PM</span></div>
+    <div class="hours-row"><span>Sunday</span><span class="closed">Closed</span></div>
+    <div class="hours-row"><span>Public Holidays</span><span class="closed">Closed</span></div>
+  </div>
+</div></section>
+
+<!-- CTA BAND -->
+<section class="cta-band"><div class="container cta-band-inner reveal">
+  <div><h2>Ready to enroll your child?</h2><p>Admissions are open — start your application today.</p></div>
+  <div class="cta-band-buttons"><a href="admissions.html" class="btn btn-primary">Start Enrollment</a><a href="programs.html" class="btn btn-outline">View Programs</a></div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo footer-logo"><div class="logo-badge"><span class="ring ring-red"></span><span class="ring ring-yellow"></span><span class="ring ring-green"></span><span class="logo-text">D</span></div><div class="logo-name"><strong>DUGNAD</strong><span>SCHOOL</span></div></div>
+      <p class="footer-tag">For Tomorrow's Leaders — a learner-centered school in Wakiso District.</p>
+    </div>
+    <div><h4>Quick Links</h4><ul><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+    <div><h4>Programs</h4><ul><li>Day Care</li><li>Kindergarten</li><li>Primary 1 – 4</li></ul></div>
+    <div><h4>Contact</h4><ul><li><i class="fa-solid fa-phone"></i> +256 778 947 496</li><li><i class="fa-solid fa-envelope"></i> dugnaduganda@gmail.com</li><li><i class="fa-solid fa-location-dot"></i> Matuga–Semuto Rd., Wakiso</li></ul></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>© 2026 Dugnad School. All rights reserved. | Designed by [YOUR FULL NAME]</p></div></div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+/* ============ GLOBAL JS (copy into every page) ============ */
+document.addEventListener("DOMContentLoaded",()=>{
+  const hamburger=document.getElementById("hamburger"),nav=document.getElementById("nav");
+  if(hamburger&&nav){
+    hamburger.addEventListener("click",()=>{const o=nav.classList.toggle("open");hamburger.classList.toggle("open",o);hamburger.setAttribute("aria-expanded",o);});
+    nav.querySelectorAll("a").forEach(l=>l.addEventListener("click",()=>{nav.classList.remove("open");hamburger.classList.remove("open");hamburger.setAttribute("aria-expanded","false");}));
+  }
+  const header=document.getElementById("header"),backToTop=document.getElementById("backToTop");
+  window.addEventListener("scroll",()=>{if(header)header.classList.toggle("scrolled",window.scrollY>20);if(backToTop)backToTop.classList.toggle("show",window.scrollY>400);});
+  if(backToTop)backToTop.addEventListener("click",e=>{e.preventDefault();window.scrollTo({top:0,behavior:"smooth"});});
+  const reveal=document.querySelectorAll(".reveal");
+  if("IntersectionObserver"in window&&reveal.length){const ob=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");ob.unobserve(e.target);}});},{threshold:.12});reveal.forEach(el=>ob.observe(el));}
+  else{reveal.forEach(el=>el.classList.add("visible"));}
+});
+/* ============ CONTACT PAGE JS ============ */
+// Smooth-scroll for "Get directions" link
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelectorAll('a[href="#map"]').forEach(a=>{
+    a.addEventListener("click",e=>{e.preventDefault();document.getElementById("map").scrollIntoView({behavior:"smooth"});});
+  });
+  console.log("Dugnad School — Contact page loaded.");
+});
+</script>
+</body>
+</html>

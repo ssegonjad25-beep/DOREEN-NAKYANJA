@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="About Dugnad School — a learner-centered Kindergarten and Day Care at Kavule Jomayi Estate, Matuga–Semuto Rd, Wakiso District, built on the Norwegian idea of dugnad." />
+<title>About Us | Dugnad School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+/* ===== GLOBAL ===== */
+:root{--red:#C8102E;--red-dark:#a30d25;--green:#1B7A3D;--yellow:#F5C518;--navy:#14213D;--dark:#1B2A4A;--text:#2b2b2b;--muted:#6b7280;--bg:#ffffff;--bg-soft:#f7f9fc;--radius:14px;--shadow:0 10px 30px rgba(20,33,61,.08);--shadow-lg:0 20px 50px rgba(20,33,61,.15);--max:1180px;--transition:all .3s ease}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:"Open Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Poppins",sans-serif;color:var(--navy);line-height:1.2}
+img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-style:none}
+.container{width:92%;max-width:var(--max);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:50px;font-weight:600;font-size:.95rem;font-family:"Poppins",sans-serif;cursor:pointer;border:2px solid transparent;transition:var(--transition);white-space:nowrap}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(200,16,46,.3)}
+.btn-primary:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:#fff;border-color:#fff}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+.topbar{background:var(--navy);color:#e8edf6;font-size:.82rem}
+.topbar-inner{display:flex;gap:24px;padding:9px 0;flex-wrap:wrap}
+.topbar-item{display:flex;align-items:center;gap:7px}
+.topbar-item i{color:var(--yellow)}
+.header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 14px rgba(0,0,0,.06);transition:var(--transition)}
+.header.scrolled{box-shadow:0 4px 22px rgba(0,0,0,.1)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:18px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{position:relative;width:46px;height:46px;border-radius:50%;background:#fff;border:3px solid var(--red);display:grid;place-items:center;overflow:hidden}
+.ring{position:absolute;border-radius:50%}
+.ring-red{width:46px;height:46px;border:4px solid var(--red)}
+.ring-yellow{width:34px;height:34px;border:3px solid var(--yellow)}
+.ring-green{width:22px;height:22px;border:3px solid var(--green)}
+.logo-text{position:relative;z-index:2;font-weight:800;font-family:"Poppins",sans-serif;color:var(--navy);font-size:1rem}
+.logo-name{display:flex;flex-direction:column;line-height:1}
+.logo-name strong{font-family:"Poppins",sans-serif;font-size:1.15rem;color:var(--navy);letter-spacing:1px}
+.logo-name span{font-size:.68rem;letter-spacing:3px;color:var(--red);font-weight:700}
+.nav{display:flex;align-items:center;gap:4px}
+.nav-link{font-weight:600;font-size:.92rem;padding:9px 14px;border-radius:8px;color:var(--dark);transition:var(--transition);font-family:"Poppins",sans-serif}
+.nav-link:hover,.nav-link.active{color:var(--red);background:#fff1f3}
+.nav-cta{margin-left:8px;padding:10px 22px;font-size:.88rem}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.hamburger span{width:26px;height:3px;background:var(--navy);border-radius:3px;transition:var(--transition)}
+.hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.section{padding:80px 0}
+.section-head{text-align:center;max-width:620px;margin:0 auto 46px}
+.eyebrow{display:inline-block;color:var(--red);font-weight:700;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.section-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:12px}
+.section-head p{color:var(--muted);font-size:1.02rem}
+
+/* ===== PAGE HERO ===== */
+.page-hero{position:relative;background:linear-gradient(135deg,rgba(20,33,61,.94),rgba(27,122,61,.82)),url('https://www.dugnad.com/wp-content/uploads/2023/01/DUGNAD-SCHOOL-1.jpg') center/cover no-repeat;color:#fff;padding:96px 0 84px;text-align:center}
+.page-hero h1{color:#fff;font-size:clamp(2rem,5vw,3.3rem);margin-bottom:14px}
+.page-hero p{max-width:720px;margin:0 auto;color:#e8edf6;font-size:1.05rem}
+.breadcrumb{display:flex;justify-content:center;gap:8px;font-size:.85rem;margin-bottom:18px;color:#cfd8e8;flex-wrap:wrap}
+.breadcrumb a:hover{color:var(--yellow)}
+.breadcrumb i{font-size:.65rem;align-self:center;color:var(--yellow)}
+
+/* ===== ABOUT INTRO ===== */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.about-media{position:relative}
+.about-media img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow-lg);object-fit:cover;aspect-ratio:4/3}
+.about-media::before{content:"";position:absolute;inset:auto -18px -18px auto;width:62%;height:62%;border-radius:var(--radius);background:linear-gradient(135deg,var(--yellow),var(--red));z-index:-1;opacity:.9}
+.about-copy h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin-bottom:16px}
+.about-copy p{color:var(--muted);margin-bottom:16px;font-size:1.02rem}
+.about-copy strong{color:var(--navy)}
+.about-list{display:grid;gap:12px;margin-top:22px}
+.about-list li{display:flex;gap:12px;align-items:flex-start;font-size:.98rem}
+.about-list i{color:var(--green);margin-top:4px;flex-shrink:0}
+
+/* ===== MOTTO BANNER ===== */
+.motto-banner{background:var(--red);color:#fff;text-align:center;padding:52px 0;position:relative;overflow:hidden}
+.motto-banner::before,.motto-banner::after{content:"";position:absolute;border-radius:50%;opacity:.14;background:var(--yellow)}
+.motto-banner::before{width:220px;height:220px;top:-90px;left:-60px}
+.motto-banner::after{width:260px;height:260px;bottom:-120px;right:-70px}
+.motto-banner .tag{display:inline-block;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--yellow);margin-bottom:10px}
+.motto-banner h2{color:#fff;font-size:clamp(1.6rem,4vw,2.6rem);position:relative;z-index:2}
+.motto-banner p{color:#ffe3e8;position:relative;z-index:2;max-width:640px;margin:12px auto 0;font-size:.98rem}
+
+/* ===== MISSION / VISION / PHILOSOPHY CARDS ===== */
+.mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.mvv-card{background:var(--bg-soft);border-radius:var(--radius);padding:34px 28px;border-top:4px solid var(--red);transition:var(--transition);box-shadow:var(--shadow)}
+.mvv-card:nth-child(2){border-top-color:var(--green)}
+.mvv-card:nth-child(3){border-top-color:var(--yellow)}
+.mvv-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.mvv-icon{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-size:1.35rem;color:#fff;margin-bottom:18px;background:var(--red)}
+.mvv-card:nth-child(2) .mvv-icon{background:var(--green)}
+.mvv-card:nth-child(3) .mvv-icon{background:var(--yellow);color:var(--navy)}
+.mvv-card h3{font-size:1.15rem;margin-bottom:10px}
+.mvv-card p{color:var(--muted);font-size:.94rem}
+
+/* ===== CORE VALUES ===== */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.value-pill{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e8edf6;border-radius:50px;padding:14px 20px;font-weight:600;font-family:"Poppins",sans-serif;color:var(--navy);box-shadow:var(--shadow);transition:var(--transition);font-size:.94rem}
+.value-pill:hover{border-color:var(--red);transform:translateY(-3px)}
+.value-pill i{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#fff1f3;color:var(--red);font-size:.9rem;flex-shrink:0}
+.value-pill:nth-child(2n) i{background:#eaf6ee;color:var(--green)}
+.value-pill:nth-child(3n) i{background:#fff8e0;color:#a07d00}
+
+/* ===== PHILOSOPHY (DUGNAD) ===== */
+.philosophy{background:var(--bg-soft)}
+.philosophy-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.philosophy-copy h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin-bottom:16px}
+.philosophy-copy p{color:var(--muted);margin-bottom:14px;font-size:1.02rem}
+.philosophy-copy .highlight{color:var(--navy);font-weight:600}
+.philosophy-media{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.philosophy-media img{width:100%;border-radius:var(--radius);object-fit:cover;aspect-ratio:1/1;box-shadow:var(--shadow)}
+.philosophy-media img:first-child{grid-row:span 2;aspect-ratio:auto;height:100%}
+
+/* ===== PROGRAMMES ===== */
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prog-card{background:#fff;border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);border:1px solid #eef2f8;transition:var(--transition);position:relative;overflow:hidden}
+.prog-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:var(--transition)}
+.prog-card:nth-child(2)::before{background:var(--green)}
+.prog-card:nth-child(3)::before{background:var(--yellow)}
+.prog-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.prog-card:hover::before{transform:scaleX(1)}
+.prog-icon{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:1.4rem;color:#fff;background:var(--red);margin-bottom:18px}
+.prog-card:nth-child(2) .prog-icon{background:var(--green)}
+.prog-card:nth-child(3) .prog-icon{background:var(--yellow);color:var(--navy)}
+.prog-card h3{font-size:1.12rem;margin-bottom:10px}
+.prog-card p{color:var(--muted);font-size:.93rem;margin-bottom:14px}
+.prog-meta{display:flex;flex-wrap:wrap;gap:8px}
+.prog-meta span{font-size:.74rem;font-weight:600;padding:5px 11px;border-radius:50px;background:#fff1f3;color:var(--red);font-family:"Poppins",sans-serif}
+.prog-card:nth-child(2) .prog-meta span{background:#eaf6ee;color:var(--green)}
+.prog-card:nth-child(3) .prog-meta span{background:#fff8e0;color:#a07d00}
+
+/* ===== ADMISSION STRIP ===== */
+.admission{background:var(--navy);color:#fff;border-radius:var(--radius);padding:44px;display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center;box-shadow:var(--shadow-lg)}
+.admission h2{color:#fff;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:12px}
+.admission p{color:#cfd8e8;font-size:.97rem;margin-bottom:10px}
+.admission ul{display:grid;gap:10px;margin-top:16px}
+.admission li{display:flex;gap:10px;font-size:.92rem;color:#e8edf6}
+.admission li i{color:var(--yellow);margin-top:4px;flex-shrink:0}
+.admission-cta{text-align:center}
+.admission-cta .fee{font-family:"Poppins",sans-serif;font-size:2rem;font-weight:800;color:var(--yellow);display:block;line-height:1.1}
+.admission-cta .fee-label{font-size:.82rem;color:#cfd8e8;display:block;margin-bottom:18px}
+
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.contact-card{background:var(--bg-soft);border-radius:var(--radius);padding:30px 24px;text-align:center;transition:var(--transition)}
+.contact-card:hover{background:#fff;box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.contact-card i{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:#fff;font-size:1.2rem;margin:0 auto 16px}
+.contact-card:nth-child(2) i{background:var(--green)}
+.contact-card:nth-child(3) i{background:var(--yellow);color:var(--navy)}
+.contact-card h3{font-size:1.02rem;margin-bottom:8px}
+.contact-card p,.contact-card a{color:var(--muted);font-size:.9rem;display:block;word-break:break-word}
+.contact-card a:hover{color:var(--red)}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--navy);color:#cfd8e8;padding:60px 0 0;font-size:.9rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:44px}
+.footer h4{color:#fff;font-size:1rem;margin-bottom:16px}
+.footer p{color:#a9b6cc;margin-bottom:12px}
+.footer-links{display:grid;gap:10px}
+.footer-links a{color:#a9b6cc;transition:var(--transition)}
+.footer-links a:hover{color:var(--yellow);padding-left:4px}
+.footer-contact li{display:flex;gap:10px;margin-bottom:10px;color:#a9b6cc}
+.footer-contact i{color:var(--yellow);margin-top:4px;flex-shrink:0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:#8fa0bb}
+.socials{display:flex;gap:10px}
+.socials a{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);color:#fff;transition:var(--transition)}
+.socials a:hover{background:var(--red);transform:translateY(-3px)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:960px){
+.about-grid,.philosophy-inner,.admission{grid-template-columns:1fr}
+.mvv-grid,.prog-grid,.contact-grid,.values-grid{grid-template-columns:1fr 1fr}
+.footer-grid{grid-template-columns:1fr 1fr}
+.about-media::before{display:none}
+.philosophy-media{order:-1}
+}
+@media(max-width:720px){
+.nav,.nav-cta{display:none}
+.hamburger{display:flex}
+.mvv-grid,.prog-grid,.contact-grid,.values-grid,.footer-grid{grid-template-columns:1fr}
+.admission{padding:30px 22px}
+.page-hero{padding:70px 0 60px}
+.section{padding:60px 0}
+.topbar-inner{justify-content:center;text-align:center}
+.footer-bottom{flex-direction:column;text-align:center;align-items:center}
+}
+
+/* Mobile dropdown menu (toggled by JS) */
+@media(max-width:720px){
+.nav.nav-open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;background:#fff;padding:12px 4%;gap:2px;box-shadow:0 12px 24px rgba(0,0,0,.1)}
+.nav.nav-open .nav-link{padding:12px 14px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-item"><i class="fa-solid fa-location-dot"></i><span>Kavule Jomayi Estate, Matuga–Semuto Rd, Wakiso</span></div>
+    <div class="topbar-item"><i class="fa-solid fa-phone"></i><span>+256 (0) 778 947 496</span></div>
+    <div class="topbar-item"><i class="fa-solid fa-envelope"></i><span>dugnaduganda@gmail.com</span></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="Dugnad School home">
+      <span class="logo-badge">
+        <span class="ring ring-red"></span>
+        <span class="ring ring-yellow"></span>
+        <span class="ring ring-green"></span>
+        <span class="logo-image"><img src="logo.png"/></span>
+      </span>
+      <span class="logo-name">
+        <strong>DUGNAD</strong>
+        <span>SCHOOL</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="programs.html" class="nav-link">Programs</a>
+      <a href="admissions.html" class="nav-link">Admissions</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="admissions.html" class="btn btn-primary nav-cta">Register Now</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>About Us</span>
+    </div>
+    <h1>About Dugnad School</h1>
+    <p>A contemporary, fast-growing Kindergarten and Day Care in Wakiso District — where every child is unique, and we learn by doing.</p>
+  </div>
+</section>
+
+<!-- ABOUT INTRO -->
+<section class="section">
+  <div class="container about-grid">
+    <div class="about-media">
+      <img src="compound.png" alt="Children learning and playing at Dugnad School" />
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">Who We Are</span>
+      <h2>A Learner-Centered School Built on Dugnad</h2>
+      <p><strong>DUGNAD</strong> is a contemporary, fast-growing Kindergarten and Day Care located in <strong>Kavule–Jomayi Estate along Matuga–Semuto Road in Wakiso District</strong>, just an hour's drive from the capital city, Kampala.</p>
+      <p>We are dedicated to providing an <strong>activity-based curriculum</strong> that aims at producing a holistic child through formal and informal Early Childhood learning programs. At DUGNAD, we believe every child is unique and should be treated to bring out their potential.</p>
+      <p>Through a talented and experienced staff team with a <strong>low teacher–pupil ratio</strong>, we offer lifelong learning based on foundational skills and focusing on critical thinking.</p>
+      <ul class="about-list">
+        <li><i class="fa-solid fa-circle-check"></i><span>Day Care from 6 months, Kindergarten from 3 years, Primary from 6 years (P1–P4)</span></li>
+        <li><i class="fa-solid fa-circle-check"></i><span>Blended, learner-centered curriculum with ICT and hands-on learning</span></li>
+        <li><i class="fa-solid fa-circle-check"></i><span>Diverse, inclusive community — local and foreign learners welcome</span></li>
+        <li><i class="fa-solid fa-circle-check"></i><span>Balanced diet, child safety, clean environment and school van</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MOTTO BANNER -->
+<section class="motto-banner">
+  <div class="container">
+    <span class="tag">Our Motto</span>
+    <h2>“We Learn by Doing.”</h2>
+    <p>Every activity at Dugnad is designed to help children discover, practice and grow — through play, teamwork and hands-on experience.</p>
+  </div>
+</section>
+
+<!-- MISSION / VISION / PHILOSOPHY -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Our Direction</span>
+      <h2>Mission, Vision &amp; Philosophy</h2>
+      <p>The principles that guide everything we do at Dugnad School.</p>
+    </div>
+    <div class="mvv-grid">
+      <div class="mvv-card">
+        <div class="mvv-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>To inspire and empower an individual with sustainable skills and knowledge for self-reliance within the society.</p>
+      </div>
+      <div class="mvv-card">
+        <div class="mvv-icon"><i class="fa-solid fa-eye"></i></div>
+        <h3>Our Vision</h3>
+        <p>A self-reliant, co-operative and prosperous citizen.</p>
+      </div>
+      <div class="mvv-card">
+        <div class="mvv-icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
+        <h3>Our Philosophy</h3>
+        <p>To voluntarily work together for a common goal — the Norwegian idea of <strong>DUGNAD</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="section" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What We Stand For</span>
+      <h2>Our Core Values</h2>
+      <p>Six values that shape our school culture and the character of every Dugnad learner.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-pill"><i class="fa-solid fa-people-group"></i>Teamwork</div>
+      <div class="value-pill"><i class="fa-solid fa-scale-balanced"></i>Integrity</div>
+      <div class="value-pill"><i class="fa-solid fa-handshake-angle"></i>Respect</div>
+      <div class="value-pill"><i class="fa-solid fa-hands-praying"></i>God-fearing</div>
+      <div class="value-pill"><i class="fa-solid fa-globe"></i>Diversity</div>
+      <div class="value-pill"><i class="fa-solid fa-heart"></i>Voluntarism</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section philosophy">
+  <div class="container philosophy-inner">
+    <div class="philosophy-copy">
+      <span class="eyebrow">Our Philosophy</span>
+      <h2>The Spirit of Dugnad</h2>
+      <p><span class="highlight">Dugnad</span> is a Norwegian concept of voluntary, collective work for the common good. It is not charity — it is the understanding that we all benefit when we each contribute our part.</p>
+      <p>At Dugnad School, this philosophy shapes how learners, teachers, parents and the community work together. We build a school where everyone belongs, everyone contributes, and everyone grows.</p>
+      <p>That is why our motto is simple: <strong>“We Learn by Doing.”</strong> Children learn best when they participate, collaborate and take responsibility — just as a community does.</p>
+    </div>
+ 
+</section>
+
+<!-- PROGRAMMES -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What We Offer</span>
+      <h2>Our Learning Programs</h2>
+      <p>A blended curriculum that supports every stage of your child's early development.</p>
+    </div>
+    <div class="prog-grid">
+      <div class="prog-card">
+        <div class="prog-icon"><i class="fa-solid fa-baby"></i></div>
+        <h3>Day Care</h3>
+        <p>A safe, caring environment for children from 6 months. Rest, play and selected educative activities before pick-up by 5:00pm.</p>
+        <div class="prog-meta"><span>From 6 months</span><span>7:30am – 4:30pm</span></div>
+      </div>
+      <div class="prog-card">
+        <div class="prog-icon"><i class="fa-solid fa-shapes"></i></div>
+        <h3>Kindergarten</h3>
+        <p>Activity-based early childhood learning that builds foundational skills, critical thinking and a love for discovery.</p>
+        <div class="prog-meta"><span>From 3 years</span><span>7:30am – 12:30pm</span></div>
+      </div>
+      <div class="prog-card">
+        <div class="prog-icon"><i class="fa-solid fa-book-open"></i></div>
+        <h3>Primary (P1–P4)</h3>
+        <p>A learner-centered primary section that continues the Dugnad approach — holistic, practical and values-driven.</p>
+        <div class="prog-meta"><span>From 6 years</span><span>P1 – P4</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSION -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="admission">
+      <div>
+        <h2>Admissions Are Open</h2>
+        <p>We admit children in Day Care from the age of six months, from three years for Kindergarten and six years for the Primary section.</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i><span>2 passport-size photos of the child and 2 of the parent/guardian</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Copy of the child's birth certificate and immunization card</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Application forms available at the Head Teacher's office</span></li>
+        </ul>
+      </div>
+      <div class="admission-cta">
+        <span class="fee">50,000 UGX</span>
+        <span class="fee-label">Admission Fee</span>
+        <a href="admissions.html" class="btn btn-primary">Apply / Register Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Get in Touch</span>
+      <h2>Visit or Contact Us</h2>
+      <p>We would love to welcome you and your child to the Dugnad family.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Our Location</h3>
+        <p>Kavule Jomayi Estate,<br />Matuga–Semuto Road,<br />Wakiso District, Uganda</p>
+      </div>
+      <div class="contact-card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Call Us</h3>
+        <a href="tel:+256778947496">+256 (0) 778 947 496</a>
+        <a href="tel:+256703064621">+256 (0) 703 064 621</a>
+        <a href="tel:+256770345991">+256 (0) 770 345 991</a>
+      </div>
+      <div class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email Us</h3>
+        <a href="mailto:dugnaduganda@gmail.com">dugnaduganda@gmail.com</a>
+        <p style="margin-top:10px">Mon – Fri: 7:30am – 5:00pm</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+              <a href="index.html" class="logo" aria-label="Dugnad School home" style="margin-bottom:14px">
+          <span class="logo-badge">
+            <span class="ring ring-red"></span>
+            <span class="ring ring-yellow"></span>
+            <span class="ring ring-green"></span>
+            <span class="logo-text">D</span>
+          </span>
+          <span class="logo-name">
+            <strong>DUGNAD</strong>
+            <span>SCHOOL</span>
+          </span>
+        </a>
+        <p>A learner-centered Kindergarten and Day Care in Wakiso District, built on the Norwegian idea of <strong style="color:#fff">dugnad</strong> — voluntary, collective work for the common good.</p>
+        <p style="color:var(--yellow);font-weight:600">“We Learn by Doing.”</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Programs</h4>
+        <ul class="footer-links">
+          <li><a href="programs.html">Day Care</a></li>
+          <li><a href="programs.html">Kindergarten</a></li>
+          <li><a href="programs.html">Primary (P1–P4)</a></li>
+          <li><a href="admissions.html">Register Now</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i><span>Kavule Jomayi Estate, Matuga–Semuto Rd, Wakiso District, Uganda</span></li>
+          <li><i class="fa-solid fa-phone"></i><span>+256 (0) 778 947 496<br />+256 (0) 703 064 621<br />+256 (0) 770 345 991</span></li>
+          <li><i class="fa-solid fa-envelope"></i><span>dugnaduganda@gmail.com</span></li>
+          <li><i class="fa-solid fa-clock"></i><span>Mon – Fri: 7:30am – 5:00pm</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Dugnad School. All rights reserved.</p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== MOBILE MENU TOGGLE ===== */
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('nav-open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+
+/* Close mobile menu when a link is clicked */
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('nav-open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
+});
+
+/* ===== STICKY HEADER SCROLL EFFECT ===== */
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+/* ===== AUTO-UPDATE COPYRIGHT YEAR ===== */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
